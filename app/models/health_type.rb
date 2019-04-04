@@ -1,0 +1,2 @@
+class HealthType < ApplicationRecord
+end
