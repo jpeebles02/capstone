@@ -1,0 +1,10 @@
+json.id member.id
+json.name member.name
+json.email member.email
+json.phone_number member.phone_number
+json.birth_date member.birth_date
+json.weight_in_pounds member.weight
+json.target_weight member.target_weight
+json.target_waist_size member.target_waist_size
+json.waist_size member.waist_size
+json.height_in_inches member.height
