@@ -1,6 +1,6 @@
-class CreateMembers < ActiveRecord::Migration[5.2]
+class CreateUsers < ActiveRecord::Migration[5.2]
   def change
-    create_table :members do |t|
+    create_table :users do |t|
       t.string :name
       t.string :email
       t.string :phone_number
@@ -10,7 +10,6 @@ class CreateMembers < ActiveRecord::Migration[5.2]
       t.integer :waist_size
       t.integer :target_weight
       t.integer :target_waist_size
-      t.integer :health_type_id
       t.string :password_digest
 
       t.timestamps

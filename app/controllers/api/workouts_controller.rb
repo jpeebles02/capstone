@@ -11,7 +11,7 @@ class Api::WorkoutsController < ApplicationController
 
   def create
     workout = Workout.new(
-      member_id: params[:member_id],
+      user_id: params[:user_id],
       exercise_id: params[:exercise_id],
       max_best: params[:max_best]
     )
@@ -24,7 +24,7 @@ class Api::WorkoutsController < ApplicationController
 
   def update
     @workout = Workout.find_by(id: params[:id])
-    @workout.member_id = params[:member_id] || @workout.member_id
+    @workout.user_id = params[:user_id] || @workout.user_id
     @workout.exercise_id = params[:exercise_id] || @workout.exercise_id
     @workout.max_best = params[:max_best] || @workout.max_best
   end

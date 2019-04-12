@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   #   get "/photos" => "photos#index"
   # end
   namespace :api do
-    get "/members" => "members#index"
-    get "/members/:id" => "members#show"
-    post "/members" => "members#create"
-    patch "/members/:id" => "members#update"
-    delete "/members/:id" => "members#destroy"
+    get "/users" => "users#index"
+    get "/users/:id" => "users#show"
+    post "/users" => "users#create"
+    patch "/users/:id" => "users#update"
+    delete "/users/:id" => "users#destroy"
 
 
     get "/exercises" => "exercises#index"
@@ -28,6 +28,8 @@ Rails.application.routes.draw do
     get "/workouts/:id" => "workouts#show"
     post "/workouts" => "workouts#create"
     patch "/workouts/:id" => "workouts#update"
+
+    post "/sessions" => "sessions#create"
 
   end
 end

@@ -14,9 +14,7 @@ class Api::ExercisesController < ApplicationController
       name: params[:name],
       description: params[:description],
       category_id: params[:category_id],
-      video_url: params[:video_url],
-      bulk_routine: params[:bulk_routine],
-      cut_routine: params[:bulk_routine],
+      routine: params[:routine],
       muscle_group_id: params[:muscle_group_id]
     )
     if @exercise.save
@@ -31,9 +29,7 @@ class Api::ExercisesController < ApplicationController
     @exercise.name = params[:name] || @exercise.name
     @exercise.description = params[:description] || @exercise.description
     @exercise.category_id = @exercise.category_id
-    @exercise.video_url = params[:video_url] || @exercise.video_url
-    @exercise.bulk_routine = params[:bulk_routine] || @exercise.bulk_routine
-    @exercise.cut_routine = params[:bulk_routine] || @exercise.cut_routine
+    @exercise.routine = params[:routine] || @exercise.bulk_routine
     @exercise.muscle_group_id = @exercise.muscle_group_id
     if @exercise.save
       render "show.json.jbuilder"

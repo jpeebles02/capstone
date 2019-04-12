@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_11_014242) do
+ActiveRecord::Schema.define(version: 2019_04_12_021539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,42 +25,27 @@ ActiveRecord::Schema.define(version: 2019_04_11_014242) do
     t.string "name"
     t.text "description"
     t.integer "category_id"
-    t.string "bulk_routine"
-    t.string "cut_routine"
+    t.string "routine"
     t.integer "muscle_group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "health_types", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "description"
-    t.string "image_url"
-  end
-
-  create_table "image_videos", force: :cascade do |t|
-    t.integer "exercise_id"
-    t.string "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "members", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone_number"
-    t.string "birth_date"
-    t.integer "height"
-    t.integer "health_type_id"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "measurements", force: :cascade do |t|
+    t.integer "user_id"
     t.integer "weight"
     t.integer "waist_size"
     t.integer "target_weight"
     t.integer "target_waist_size"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.integer "exercise_id"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "muscle_groups", force: :cascade do |t|
@@ -72,15 +57,30 @@ ActiveRecord::Schema.define(version: 2019_04_11_014242) do
   end
 
   create_table "plans", force: :cascade do |t|
-    t.integer "member_id"
+    t.integer "user_id"
     t.integer "exercise_id"
     t.string "routine"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone_number"
+    t.string "birth_date"
+    t.integer "height"
+    t.integer "weight"
+    t.integer "waist_size"
+    t.integer "target_weight"
+    t.integer "target_waist_size"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "workouts", force: :cascade do |t|
-    t.integer "member_id"
+    t.integer "user_id"
     t.integer "exercise_id"
     t.string "max_best"
     t.datetime "created_at", null: false

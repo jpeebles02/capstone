@@ -11,7 +11,7 @@ class Api::PlansController < ApplicationController
 
   def create
     plan = Plan.new(
-      member_id: params[:member_id],
+      user_id: params[:user_id],
       exercise_id: params[:exercise_id],
       routine: params[:routine]
     )

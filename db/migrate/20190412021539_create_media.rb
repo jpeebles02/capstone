@@ -1,6 +1,6 @@
-class CreateImageVideos < ActiveRecord::Migration[5.2]
+class CreateMedia < ActiveRecord::Migration[5.2]
   def change
-    create_table :image_videos do |t|
+    create_table :media do |t|
       t.integer :exercise_id
       t.string :url
 
