@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_12_021539) do
+ActiveRecord::Schema.define(version: 2019_04_28_154035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,11 +21,20 @@ ActiveRecord::Schema.define(version: 2019_04_12_021539) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "exercise_routines", force: :cascade do |t|
+    t.integer "exercise_id"
+    t.integer "routine_id"
+    t.string "amount"
+    t.string "max_best"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "exercises", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.integer "category_id"
-    t.string "routine"
+    t.string "amount"
     t.integer "muscle_group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -56,10 +65,10 @@ ActiveRecord::Schema.define(version: 2019_04_12_021539) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "plans", force: :cascade do |t|
+  create_table "routines", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "exercise_id"
-    t.string "routine"
+    t.string "name"
+    t.string "day_of_week"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -75,14 +84,14 @@ ActiveRecord::Schema.define(version: 2019_04_12_021539) do
     t.integer "target_weight"
     t.integer "target_waist_size"
     t.string "password_digest"
+    t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "workouts", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "exercise_id"
-    t.string "max_best"
+    t.integer "exercise_routine_id"
+    t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

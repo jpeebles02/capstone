@@ -13,6 +13,14 @@ Rails.application.routes.draw do
     patch "/users/:id" => "users#update"
     delete "/users/:id" => "users#destroy"
 
+    get "/routines" => "routines#index"
+    get "/routines/:id" => "routines#show"
+    post "/routines" => "routines#create"
+    delete "/routines/:id" => "routines#destroy"
+    
+
+    get "/exercise_routines" => "exercise_routines#index"
+    post "/exercise_routines" => "exercise_routines#create"
 
     get "/exercises" => "exercises#index"
     post "/exercises" => "exercises#create"
@@ -24,10 +32,7 @@ Rails.application.routes.draw do
     get "/plans/:id" => "plans#show"
     post "/plans" => "plans#create"
 
-    get "/workouts" => "workouts#index"
-    get "/workouts/:id" => "workouts#show"
     post "/workouts" => "workouts#create"
-    patch "/workouts/:id" => "workouts#update"
 
     post "/sessions" => "sessions#create"
 

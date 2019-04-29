@@ -1,4 +1,6 @@
 class Api::ExercisesController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     @exercises = Exercise.all
     render "index.json.jbuilder"
@@ -14,7 +16,7 @@ class Api::ExercisesController < ApplicationController
       name: params[:name],
       description: params[:description],
       category_id: params[:category_id],
-      routine: params[:routine],
+      amount: params[:amount],
       muscle_group_id: params[:muscle_group_id]
     )
     if @exercise.save

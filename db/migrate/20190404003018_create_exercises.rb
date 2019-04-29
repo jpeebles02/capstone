@@ -4,7 +4,7 @@ class CreateExercises < ActiveRecord::Migration[5.2]
       t.string :name
       t.text :description
       t.integer :category_id
-      t.string :routine
+      t.string :amount
       t.integer :muscle_group_id
 
       t.timestamps

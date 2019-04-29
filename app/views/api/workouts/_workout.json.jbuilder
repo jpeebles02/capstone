@@ -1,3 +1,2 @@
-json.user_id workout.user_id
-json.exercise_id workout.exercise_id
-json.max_best workout.max_best
+json.exercise_routine_id workout.exercise_routine_id
+json.amount workout.amount
