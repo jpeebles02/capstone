@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(name: "Jimmy", email: "jimmy@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 70, weight: 160, waist_size: 32, target_weight: 180, target_waist_size: 130, password: "password", password_confirmation: "password")
-User.create!(name: "lisa", email: "lisa@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 65, weight: 200, waist_size: 34, target_weight: 190, target_waist_size: 32, password: "password", password_confirmation: "password")
-User.create!(name: "isaac", email: "isaac@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 72, weight: 150, waist_size: 28, target_weight: 140, target_waist_size: 26, password: "password", password_confirmation: "password")
-User.create!(name: "kim", email: "kim@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 66, weight: 220, waist_size: 29, target_weight: 200, target_waist_size: 30, password: "password", password_confirmation: "password")
-User.create!(name: "damon", email: "damon@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 74, weight: 230, waist_size: 35, target_weight: 200, target_waist_size: 32, password: "password", password_confirmation: "password")
-User.create!(name: "anna", email: "anna@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 64, weight: 200, waist_size: 32, target_weight: 175, target_waist_size: 30, password: "password", password_confirmation: "password")
+User.create!(name: "Jimmy", image_url: "https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg", email: "jimmy@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 70, weight: 160, waist_size: 32, target_weight: 180, target_waist_size: 130, password: "password", password_confirmation: "password")
+User.create!(name: "lisa", image_url: "", email: "lisa@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 65, weight: 200, waist_size: 34, target_weight: 190, target_waist_size: 32, password: "password", password_confirmation: "password")
+User.create!(name: "isaac", image_url: "", email: "isaac@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 72, weight: 150, waist_size: 28, target_weight: 140, target_waist_size: 26, password: "password", password_confirmation: "password")
+User.create!(name: "kim", image_url: "", email: "kim@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 66, weight: 220, waist_size: 29, target_weight: 200, target_waist_size: 30, password: "password", password_confirmation: "password")
+User.create!(name: "damon", image_url: "", email: "damon@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 74, weight: 230, waist_size: 35, target_weight: 200, target_waist_size: 32, password: "password", password_confirmation: "password")
+User.create!(name: "anna", image_url: "", email: "anna@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 64, weight: 200, waist_size: 32, target_weight: 175, target_waist_size: 30, password: "password", password_confirmation: "password")
 
 Category.create!(name: "weights")
 Category.create!(name: "cardio")

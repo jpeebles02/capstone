@@ -16,6 +16,7 @@ class Api::UsersController < ApplicationController
   def create 
     user = User.new(
       name: params[:name],
+      image_url: params[:image_url],
       email: params[:email],
       phone_number: params[:phone_number],
       birth_date: params[:birth_date],

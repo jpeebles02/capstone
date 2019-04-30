@@ -9,3 +9,4 @@ json.target_waist_size user.target_waist_size
 json.waist_size user.waist_size
 json.height_in_inches user.height
 json.routines user.routines
+json.image_url user.image_url
