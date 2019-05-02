@@ -3,11 +3,20 @@ class Api::ExercisesController < ApplicationController
 
   def index
     @exercises = Exercise.all
+
+    if params["search"]
+      @exercises = @exercises.where("name ILIKE ?", "%#{params["search"]}%")
+    end
+
     render "index.json.jbuilder"
   end
 
   def show
     @exercise = Exercise.find_by(id: params[:id])
+    @musclegroup = Exercise.where(muscle_group_id: @exercise.muscle_group_id)
+
+    # @exercise[] = @musclegroup
+
     render "show.json.jbuilder"
   end
 

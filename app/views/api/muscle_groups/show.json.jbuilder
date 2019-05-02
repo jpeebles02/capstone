@@ -1,0 +1,1 @@
+json.partial! "muscle_group.json.jbuilder", muscle_group: @muscle_group

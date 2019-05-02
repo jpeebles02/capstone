@@ -1,0 +1,3 @@
+json.name muscle_group.name
+json.image_url muscle_group.image_url
+json.description muscle_group.description

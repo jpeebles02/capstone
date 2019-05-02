@@ -32,6 +32,12 @@ Rails.application.routes.draw do
     get "/plans/:id" => "plans#show"
     post "/plans" => "plans#create"
 
+    get "/muscle_groups" => "muscle_groups#index"
+    get "/muscle_groups/:id" => "muscle_groups#show"
+
+    get "/categories" => "categories#index"
+    get "/categories/:id" => "categories#show"
+
     post "/workouts" => "workouts#create"
 
     post "/sessions" => "sessions#create"

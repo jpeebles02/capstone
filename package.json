@@ -1,5 +1,7 @@
 {
   "name": "capstone",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "vuejs-datepicker": "^1.5.4"
+  }
 }
