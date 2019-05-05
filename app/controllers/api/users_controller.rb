@@ -21,10 +21,8 @@ class Api::UsersController < ApplicationController
       phone_number: params[:phone_number],
       birth_date: params[:birth_date],
       height: params[:height],
-      weight: params[:weight],
-      waist_size: params[:waist_size],
+      current_weight: params[:current_weight],
       target_weight: params[:target_weight],
-      target_waist_size: params[:target_waist_size],
       password: params[:password],
       password_confirmation: params[:password_confirmation]
       )
@@ -42,8 +40,7 @@ class Api::UsersController < ApplicationController
     @user.phone_number = params[:phone_number] || @user.phone_number
     @user.birth_date = params[:birth_date] || @user.birth_date
     @user.height = params[:height] || @user.height
-    @user.weight = params[:weight] || @user.weight
-    @user.waist_size = params[:waist_size] || @user.waist_size
+    @user.weight = params[:current_weight] || @user.current_weight
     @user.target_weight = params[:target_weight] || @user.target_weight
     @user.target_waist_size = params[:target_waist_size] || @user.target_waist_size
     if @user.save

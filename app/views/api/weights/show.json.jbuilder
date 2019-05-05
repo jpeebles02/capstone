@@ -1,0 +1,1 @@
+json.partial! "weight.json.jbuilder", weight: @weight

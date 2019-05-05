@@ -6,4 +6,8 @@ class User < ApplicationRecord
   # has_many :plans
   # has_many :exercises, through: :plans
   has_many :routines
+  has_many :appointments
+
+  has_many :user_weights
+  has_many :weights, through: :user_weights
 end

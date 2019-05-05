@@ -6,10 +6,8 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :phone_number
       t.string :birth_date
       t.integer :height
-      t.integer :weight
-      t.integer :waist_size
+      t.integer :current_weight
       t.integer :target_weight
-      t.integer :target_waist_size
       t.string :password_digest
       t.boolean "admin", default: false
 

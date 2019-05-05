@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(name: "Jimmy", image_url: "https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg", email: "jimmy@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 70, weight: 160, waist_size: 32, target_weight: 180, target_waist_size: 130, password: "password", password_confirmation: "password")
-User.create!(name: "lisa", image_url: "", email: "lisa@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 65, weight: 200, waist_size: 34, target_weight: 190, target_waist_size: 32, password: "password", password_confirmation: "password")
-User.create!(name: "isaac", image_url: "", email: "isaac@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 72, weight: 150, waist_size: 28, target_weight: 140, target_waist_size: 26, password: "password", password_confirmation: "password")
-User.create!(name: "kim", image_url: "", email: "kim@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 66, weight: 220, waist_size: 29, target_weight: 200, target_waist_size: 30, password: "password", password_confirmation: "password")
-User.create!(name: "damon", image_url: "", email: "damon@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 74, weight: 230, waist_size: 35, target_weight: 200, target_waist_size: 32, password: "password", password_confirmation: "password")
-User.create!(name: "anna", image_url: "", email: "anna@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 64, weight: 200, waist_size: 32, target_weight: 175, target_waist_size: 30, password: "password", password_confirmation: "password")
+User.create!(name: "Jimmy", image_url: "https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg", email: "jimmy@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 70, current_weight: 160, target_weight: 180,  password: "password", password_confirmation: "password")
+User.create!(name: "lisa", image_url: "", email: "lisa@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 65, current_weight: 200, target_weight: 190, password: "password", password_confirmation: "password")
+User.create!(name: "isaac", image_url: "", email: "isaac@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 72, current_weight: 150, target_weight: 140, password: "password", password_confirmation: "password")
+User.create!(name: "kim", image_url: "", email: "kim@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 66, current_weight: 220, target_weight: 200, password: "password", password_confirmation: "password")
+User.create!(name: "damon", image_url: "", email: "damon@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 74, current_weight: 230, target_weight: 200, password: "password", password_confirmation: "password")
+User.create!(name: "anna", image_url: "", email: "anna@email.com", phone_number: "3125137536", birth_date: "01/05/1996", height: 64, current_weight: 200, target_weight: 175, password: "password", password_confirmation: "password")
 
 Category.create!(name: "weights")
 Category.create!(name: "cardio")
@@ -157,6 +157,22 @@ Media.create!(exercise_id: 17, url: "https://evofitness.at/wp-content/uploads/20
 Media.create!(exercise_id: 18, url: "https://evofitness.at/wp-content/uploads/2018/01/EVO_banner_February_13.jpg")
 Media.create!(exercise_id: 18, url: "https://evofitness.at/wp-content/uploads/2018/01/EVO_banner_February_13.jpg")
 
+
+Weight.create!(amount: 124)
+Weight.create!(amount: 150)
+Weight.create!(amount: 175)
+Weight.create!(amount: 178)
+Weight.create!(amount: 210)
+Weight.create!(amount: 220)
+Weight.create!(amount: 230)
+
+UserWeight.create!(user_id: 1, weight_id: 1, date: "11/01/2018")
+UserWeight.create!(user_id: 1, weight_id: 2, date: "12/01/2018")
+UserWeight.create!(user_id: 1, weight_id: 3, date: "1/01/2019")
+UserWeight.create!(user_id: 1, weight_id: 4, date: "2/01/2019")
+UserWeight.create!(user_id: 1, weight_id: 5, date: "3/01/2019")
+UserWeight.create!(user_id: 1, weight_id: 6, date: "4/01/2019")
+UserWeight.create!(user_id: 2, weight_id: 7, date: "5/01/2019")
 
 
 Routine.create!(user_id: 1 , day_of_week: "Monday", name: "Cardio")

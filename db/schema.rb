@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_30_010135) do
+ActiveRecord::Schema.define(version: 2019_05_05_190145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "appointments", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "start_time"
+    t.string "routine"
+    t.string "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -73,21 +82,33 @@ ActiveRecord::Schema.define(version: 2019_04_30_010135) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_weights", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "weight_id"
+    t.string "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "phone_number"
     t.string "birth_date"
     t.integer "height"
-    t.integer "weight"
-    t.integer "waist_size"
+    t.integer "current_weight"
     t.integer "target_weight"
-    t.integer "target_waist_size"
     t.string "password_digest"
     t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_url"
+  end
+
+  create_table "weights", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "amount"
   end
 
   create_table "workouts", force: :cascade do |t|
