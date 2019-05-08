@@ -1,4 +1,6 @@
 class Api::AppointmentsController < ApplicationController
+  before_action :authenticate_user
+  
   def index
     @appointments = current_user.appointments
     render "index.json.jbuilder"
@@ -14,7 +16,7 @@ class Api::AppointmentsController < ApplicationController
       user_id: current_user.id,
       start_time: params[:start_time],
       date: params[:date], 
-      routine_id: params [routine_id]
+      routine_id: params[:routine_id]
       )
     @appointment.save
     render "show.json.jbuilder"

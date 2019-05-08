@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_05_05_190145) do
   create_table "appointments", force: :cascade do |t|
     t.integer "user_id"
     t.string "start_time"
-    t.string "routine"
+    t.integer "routine_id"
     t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 2019_05_05_190145) do
 
   create_table "user_weights", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "weight_id"
+    t.integer "weight"
     t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -103,12 +103,6 @@ ActiveRecord::Schema.define(version: 2019_05_05_190145) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_url"
-  end
-
-  create_table "weights", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "amount"
   end
 
   create_table "workouts", force: :cascade do |t|

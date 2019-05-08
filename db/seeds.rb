@@ -157,22 +157,13 @@ Media.create!(exercise_id: 17, url: "https://evofitness.at/wp-content/uploads/20
 Media.create!(exercise_id: 18, url: "https://evofitness.at/wp-content/uploads/2018/01/EVO_banner_February_13.jpg")
 Media.create!(exercise_id: 18, url: "https://evofitness.at/wp-content/uploads/2018/01/EVO_banner_February_13.jpg")
 
-
-Weight.create!(amount: 124)
-Weight.create!(amount: 150)
-Weight.create!(amount: 175)
-Weight.create!(amount: 178)
-Weight.create!(amount: 210)
-Weight.create!(amount: 220)
-Weight.create!(amount: 230)
-
-UserWeight.create!(user_id: 1, weight_id: 1, date: "11/01/2018")
-UserWeight.create!(user_id: 1, weight_id: 2, date: "12/01/2018")
-UserWeight.create!(user_id: 1, weight_id: 3, date: "1/01/2019")
-UserWeight.create!(user_id: 1, weight_id: 4, date: "2/01/2019")
-UserWeight.create!(user_id: 1, weight_id: 5, date: "3/01/2019")
-UserWeight.create!(user_id: 1, weight_id: 6, date: "4/01/2019")
-UserWeight.create!(user_id: 2, weight_id: 7, date: "5/01/2019")
+UserWeight.create!(user_id: 1, weight: 208, date: "11/01/2018")
+UserWeight.create!(user_id: 1, weight: 212, date: "12/01/2018")
+UserWeight.create!(user_id: 1, weight: 213, date: "1/01/2019")
+UserWeight.create!(user_id: 1, weight: 200, date: "2/01/2019")
+UserWeight.create!(user_id: 1, weight: 185, date: "3/01/2019")
+UserWeight.create!(user_id: 1, weight: 165, date: "4/01/2019")
+UserWeight.create!(user_id: 2, weight: 173, date: "5/01/2019")
 
 
 Routine.create!(user_id: 1 , day_of_week: "Monday", name: "Cardio")

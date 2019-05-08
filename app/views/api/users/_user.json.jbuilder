@@ -3,7 +3,7 @@ json.name user.name
 json.email user.email
 json.phone_number user.phone_number
 json.birth_date user.birth_date
-json.current_weight_in_pounds user.current_weight
+json.current_weight user.current_weight
 json.target_weight user.target_weight
 json.height_in_inches user.height
 json.routines user.routines

@@ -40,9 +40,8 @@ class Api::UsersController < ApplicationController
     @user.phone_number = params[:phone_number] || @user.phone_number
     @user.birth_date = params[:birth_date] || @user.birth_date
     @user.height = params[:height] || @user.height
-    @user.weight = params[:current_weight] || @user.current_weight
+    @user.current_weight = params[:current_weight] || @user.current_weight
     @user.target_weight = params[:target_weight] || @user.target_weight
-    @user.target_waist_size = params[:target_waist_size] || @user.target_waist_size
     if @user.save
       render "show.json.jbuilder"
     else 

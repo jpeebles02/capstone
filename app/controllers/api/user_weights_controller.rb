@@ -5,7 +5,7 @@ class Api::UserWeightsController < ApplicationController
     # product = Product.find_by(id: params[:product_id])
 
     @user_weights = UserWeight.new(
-      weight_id: params[:weight_id],
+      weight: params[:weight],
       date: params[:date],
       user_id: current_user.id
     
