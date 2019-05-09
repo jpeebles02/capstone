@@ -9,6 +9,6 @@ json.height_in_inches user.height
 json.routines user.routines
 json.image_url user.image_url
 json.user_weights user.user_weights.each do |user_weight|
-  json.amount user_weight.weight
+  json.weight user_weight.weight
   json.date user_weight.date
 end

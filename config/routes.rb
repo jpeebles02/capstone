@@ -41,7 +41,6 @@ Rails.application.routes.draw do
     post "/plans" => "plans#create"
 
     get "/user_weights" => "user_weights#index"
-    get "/user_weights/:id" => "user_weights#show"
     post "/user_weights" => "user_weights#create"
 
     get "/muscle_groups" => "muscle_groups#index"
